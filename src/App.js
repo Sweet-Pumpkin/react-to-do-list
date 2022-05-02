@@ -1,3 +1,4 @@
+import bg from './img/bg_your_name.png';
 import './App.css';
 import { useState } from "react";
 
@@ -13,25 +14,43 @@ function App() {
     setToDos((currentArray) => [toDo, ...currentArray]);
     setToDo("");
   };
-  console.log(toDos);
+  const onClick = (idx) => {
+    setToDos(toDos.filter((item, toDoIdx) => idx !== toDoIdx));
+  }
+
   return (
-    <div>
-      <h1>My To Dos {toDos.length}</h1>
-      <form onSubmit={onSubmit}>
-      <input 
-        onChange={onChange} 
-        value={toDo} 
-        type="text" 
-        placeholder="Write your to do..." 
-      />
-      <button>Add To Do</button>
-      </form>
-      <hr />
-      <ul>
-      {toDos.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
-      </ul>
+    <div className="box">
+      <div className="todo">
+        <h1>너의 할 일은。</h1>
+        <span className="sub">"아직 한 적 없는 일을, 찾고 있어"</span>
+        <form
+          className="list" 
+          onSubmit={onSubmit}>
+          <input 
+            onChange={onChange} 
+            maxLength={15}
+            value={toDo} 
+            type="text" 
+            placeholder="Write your to do..." 
+          />
+          <button>
+          <span className="material-symbols-outlined">add</span>
+          </button>
+        </form>
+        <ul>
+          {toDos.map((item, idx) => (
+            <li 
+              key={idx}
+            >
+              {item}
+              <button onClick={() => onClick(idx)}>
+              <span className="material-symbols-outlined">delete_forever</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <img src={bg} alt="your_name" />
     </div>
   );
 }
