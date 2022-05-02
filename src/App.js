@@ -10,7 +10,11 @@ function App() {
     if (toDo === "") {
       return;
     }
-    setToDos((currentArray) => [toDo, ...currentArray]);
+    if (toDos.length <+ 10) {
+      setToDos((currentArray) => [toDo, ...currentArray]);
+    } else {
+      return alert("등록된 리스트가 너무 많습니다.");
+    }
     setToDo("");
   };
   const onClick = (idx) => {
