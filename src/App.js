@@ -1,4 +1,3 @@
-import bg from './img/bg_your_name.png';
 import './App.css';
 import { useState } from "react";
 
@@ -50,7 +49,6 @@ function App() {
           ))}
         </ul>
       </div>
-      <img src={bg} alt="your_name" />
     </div>
   );
 }
