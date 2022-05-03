@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function App() {
   const [toDo, setToDo] = useState("");
@@ -20,6 +20,15 @@ function App() {
   const onClick = (idx) => {
     setToDos(toDos.filter((item, toDoIdx) => idx !== toDoIdx));
   }
+  useEffect(() => {
+    const data = localStorage.getItem('toDoList');
+    if (data) {
+      setToDos(JSON.parse(data));
+    }
+  }, []);
+  useEffect(() => {
+    localStorage.setItem('toDoList', JSON.stringify(toDos));
+  }, [toDos]);
 
   return (
     <div className="box">
