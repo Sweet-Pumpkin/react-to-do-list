@@ -36,6 +36,7 @@
 .box > .todo > h1 {
   font-size: 64px;
   font-family: 'Nanum Myeongjo', serif;
+  margin-left: 35px;
 } 
 
 .box > .todo > .sub {
