@@ -1,5 +1,5 @@
 # React로 To Do 리스트 만들기
-[Netlify 배포 링크](https://app.netlify.com/sites/brilliant-cranachan-4b5cc5/overview) <br />
+[Netlify 배포 링크](https://brilliant-cranachan-4b5cc5.netlify.app/) <br />
 [Velog 정리](https://velog.io/@sweet_pumpkin/%EB%AC%B4%EC%9E%91%EC%A0%95-%EB%94%B0%EB%9D%BC%ED%95%98%EA%B8%B0-%EB%84%88%EC%9D%98-%ED%95%A0-%EC%9D%BC%EC%9D%80%E3%80%82React%EB%A1%9C-To-Do-List-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 ## 2022.05.01 노마드 코더 영상 참고해서 To Do 리스트 만들어 보기
 - useState 사용해서 onChange, onSubmit 이벤트 만들기
