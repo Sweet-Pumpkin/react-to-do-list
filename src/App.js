@@ -18,7 +18,7 @@ function App() {
     setToDo("");
   };
   const onClick = (idx) => {
-    setToDos(toDos.filter((item, toDoIdx) => idx !== toDoIdx));
+    setToDos(toDos.filter((_,toDoIdx) => idx !== toDoIdx));
   }
   useEffect(() => {
     const data = localStorage.getItem('toDoList');
