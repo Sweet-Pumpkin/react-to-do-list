@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import { useState, useEffect } from "react";
 
 function App() {
@@ -45,7 +45,7 @@ function App() {
             type="text" 
             placeholder="Write your to do..." 
           />
-          <button>
+          <button className="add">
           <span className="material-symbols-outlined">add</span>
           </button>
         </form>
@@ -55,7 +55,7 @@ function App() {
               key={idx}
             >
               {item}
-              <button onClick={() => onClick(idx)}>
+              <button className="remove" onClick={() => onClick(idx)}>
               <span className="material-symbols-outlined">delete_forever</span>
               </button>
             </li>
